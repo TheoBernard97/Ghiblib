@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     padding : 0 10%;
     font-family: 'Montserrat', sans-serif;
+    background-color : #F6F6F6;
   }
 
   code {
