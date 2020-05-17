@@ -6,7 +6,6 @@ import styled from "styled-components";
 const MoviesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
 `;
 
 function Movies() {
@@ -29,7 +28,7 @@ function Movies() {
   return (
     <div>
       <Header />
-      <h2>Movies</h2>
+      <h1>Movies</h1>
       <MoviesWrapper>
         {movies.map((movie) => (
           <MovieCard
