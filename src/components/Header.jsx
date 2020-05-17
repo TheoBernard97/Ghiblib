@@ -31,7 +31,7 @@ function Header() {
       <nav>
         <Linker to="/">Home</Linker>
         <Linker to="/movies">Movies</Linker>
-        <Linker>More</Linker>
+        <Linker to="/museum">Museum</Linker>
       </nav>
     </HeaderWrapper>
   );
