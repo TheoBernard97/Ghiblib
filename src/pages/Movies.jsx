@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import MovieCard from "../components/MovieCard";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const MoviesWrapper = styled.div`
   display: grid;
@@ -9,28 +10,14 @@ const MoviesWrapper = styled.div`
 `;
 
 function Movies() {
-  const [movies, setMovies] = useState([]);
-  const [fetched, setFetched] = useState(false);
-
-  if (fetched === false) {
-    setFetched(true);
-    fetch("https://ghibliapi.herokuapp.com/films")
-      .then((res) => res.json())
-      .then((data) => {
-        data.forEach((element) => {
-          setMovies((prevElements) => {
-            return [...prevElements, element];
-          });
-        });
-      });
-  }
+  const movieList = useSelector((state) => state);
 
   return (
     <div>
       <Header />
       <h1>Movies</h1>
       <MoviesWrapper>
-        {movies.map((movie) => (
+        {movieList.map((movie) => (
           <MovieCard
             key={movie.id}
             title={movie.title}
