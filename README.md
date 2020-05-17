@@ -12,6 +12,9 @@ You will also see any lint errors in the console.
 
 ### Dependencies
 
-- Package create-react-app
+This project was bootstrapped with Create React App.
+
+- redux
+- redux-react
 - react-router-dom
 - styled-components
