@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import MovieCard from "../components/MovieCard";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
@@ -25,6 +26,7 @@ function Movies() {
           />
         ))}
       </MoviesWrapper>
+      <Footer />
     </div>
   );
 }
