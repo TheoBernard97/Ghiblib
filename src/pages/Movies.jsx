@@ -21,8 +21,10 @@ function Movies() {
         {movieList.map((movie) => (
           <MovieCard
             key={movie.id}
+            imgUrl={movie.imgUrl}
             title={movie.title}
             director={movie.director}
+            release_date={movie.release_date}
           />
         ))}
       </MoviesWrapper>

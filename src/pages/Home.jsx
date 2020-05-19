@@ -23,6 +23,7 @@ const Wrapper = styled.div`
     width: 67.5%;
     margin-left: 2.5%;
     font-size: 1.2rem;
+    text-align: left;
   }
 `;
 
@@ -43,11 +44,11 @@ function Home() {
             collaborated with video game studios on the visual development of
             several video games.
           </p>
-          <img src="./assets/Chihiro_.png" alt="Chihiro" />
+          <img src="./assets/Chihiro_home.png" alt="Chihiro" />
         </div>
         <div>
-          <img src="./assets/Totoro.png" alt="Totoro" />
-          <p className="text2">
+          <img src="./assets/Totoro_home.png" alt="Totoro" />
+          <p>
             Six of Studio Ghibli's films are among the 10 highest-grossing anime
             films made in Japan, with Spirited Away (2001) being the highest,
             grossing over US$360 million worldwide. Many of their works have won
@@ -67,7 +68,7 @@ function Home() {
             Suzuki announced that Miyazaki had come out of retirement again to
             direct a new feature film, How Do You Live?, with Studio Ghibli.
           </p>
-          <img src="./assets/Momonoke.png" alt="Momonoke" />
+          <img src="./assets/Momonoke_home.png" alt="Momonoke" />
         </div>
       </Wrapper>
       <Footer />

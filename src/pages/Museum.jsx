@@ -21,9 +21,9 @@ const MuseumWrapper = styled.div`
     .btn {
       color: unset;
       text-decoration: none;
-        font-weight: bold;
       background-color: #5fb4c9;
       padding 10px;
+      border: solid black 1px;
       border-radius: 4px;
       &:hover {
         background-color: #6ec9dd;
@@ -47,17 +47,17 @@ function Museum() {
         rooftop garden, and a theater for exclusive short films by Studio
         Ghibli.
       </p>
+      <iframe
+        src="https://www.youtube.com/embed/-Q9TLKxAXtQ"
+        title="Studio Ghibli"
+        frameBorder="0"
+        allowFullScreen
+      ></iframe>
       <div className="btn-div">
         <a className="btn" href="http://www.ghibli-museum.jp/en/">
           Ghibli Museum
         </a>
       </div>
-      <iframe
-        src="https://www.youtube.com/embed/-Q9TLKxAXtQ"
-        title="Studio Ghibli"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
       <Footer />
     </MuseumWrapper>
   );
