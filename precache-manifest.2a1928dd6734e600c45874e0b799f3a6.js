@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f49b7dae7f9729e38ee54db4e9d81c4",
+    "revision": "b7b1e681ab16bd6a5f414482986fb09d",
     "url": "/Ghiblib/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Ghiblib/static/js/2.83375a05.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ef9b4650004f5c8f78b",
-    "url": "/Ghiblib/static/js/main.0f7cbfe1.chunk.js"
+    "revision": "cfe5a35aa19e0b85d5ba",
+    "url": "/Ghiblib/static/js/main.a313c3f3.chunk.js"
   },
   {
     "revision": "32b9d944a4138019df15",
