@@ -27,7 +27,7 @@ const Linker = styled(Link)`
 function Header() {
   return (
     <HeaderWrapper>
-      <img src="../assets/Logo_Ghibli.png" alt="Studio Ghibli logo" />
+      <img src="./assets/Logo_Ghibli.png" alt="Studio Ghibli logo" />
       <nav>
         <Linker to="/">Home</Linker>
         <Linker to="/movies">Movies</Linker>
