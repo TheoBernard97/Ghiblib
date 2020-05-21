@@ -5,7 +5,6 @@ import { createGlobalStyle } from "styled-components";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import moviesReducer from "./reducers/movies";
-import * as serviceWorker from "./serviceWorker";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,11 +27,11 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
+  <Provider store={store}>
+    <React.StrictMode>
       <GlobalStyle />
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );
