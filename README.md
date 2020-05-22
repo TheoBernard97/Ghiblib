@@ -2,14 +2,14 @@
 
 Current live version : https://theobernard97.github.io/Ghiblib
 
-A gallery website about Studio Ghibli. This website is build with React and use the public API about Studio Ghibli [https://ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com).
+This website is build with React and use the public API about Studio Ghibli [https://ghibliapi.herokuapp.com](https://ghibliapi.herokuapp.com).
 
 ### Dependencies
 
 This project was bootstrapped with Create React App.
 
 - redux
-- redux-react
+- react-redux
 - react-router-dom
 - styled-components
 - gh-pages

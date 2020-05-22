@@ -18,9 +18,17 @@ const Movie = styled.div`
   }
 
   img {
-    width: 124px;
-    height: 176px;
+    margin: auto;
+    width: 100%;
     border: solid black 1px;
+  }
+
+  h2 {
+    margin-top: 5px;
+  }
+
+  p {
+    margin-bottom: unset;
   }
 `;
 
@@ -30,8 +38,8 @@ function MovieCard(props) {
       <img src={props.imgUrl} alt="Movie poster" />
       <div>
         <h2>{props.title}</h2>
-        <p>Director : {props.director}</p>
-        <p>Release : {props.release_date}</p>
+        <p>{props.director}</p>
+        <p>{props.release_date}</p>
       </div>
     </Movie>
   );
