@@ -8,6 +8,14 @@ import { useSelector } from "react-redux";
 const MoviesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media all and (max-width: 1489px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media all and (max-width: 944px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function Movies() {

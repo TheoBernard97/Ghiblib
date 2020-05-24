@@ -30,6 +30,14 @@ const Movie = styled.div`
   p {
     margin-bottom: unset;
   }
+
+  @media all and (max-width: 1489px) {
+    width: 85%;
+  }
+
+  @media all and (max-width: 944px) {
+    width: 75%;
+  }
 `;
 
 function MovieCard(props) {
