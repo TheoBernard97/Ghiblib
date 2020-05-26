@@ -36,7 +36,12 @@ const Movie = styled.div`
   }
 
   @media all and (max-width: 944px) {
-    width: 75%;
+    width: 95%;
+    margin: 5% auto;
+
+    h2 {
+      font-size: 1.3rem;
+    }
   }
 `;
 

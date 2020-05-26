@@ -15,13 +15,25 @@ const HeaderWrapper = styled.div`
   nav {
     margin: auto;
   }
+
+  @media all and (max-width: 944px) {
+    display: block;
+    nav {
+      margin: 3% auto auto;
+    }
+  }
 `;
 
 const Linker = styled(Link)`
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  margin: 25px;
+  margin: 10%;
+
+  @media all and (max-width: 944px) {
+    font-size: 1.2rem;
+    margin: 3%;
+  }
 `;
 
 function Header() {

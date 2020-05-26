@@ -30,6 +30,21 @@ const MuseumWrapper = styled.div`
       }
     }
   }
+
+  @media all and (max-width: 944px) { 
+    
+    p {
+      margin: 2% auto;
+      width: 100%;
+    }
+
+    iframe {
+      display: none;
+    }
+
+    .btn-div {
+      margin: 10%;
+  }
 `;
 
 function Museum() {

@@ -14,7 +14,7 @@ const MoviesWrapper = styled.div`
   }
 
   @media all and (max-width: 944px) {
-    grid-template-columns: 1fr;
+    display: unset;
   }
 `;
 

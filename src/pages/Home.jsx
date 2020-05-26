@@ -25,6 +25,18 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     text-align: left;
   }
+
+  @media all and (max-width: 944px) {
+    img {
+      display: none;
+    }
+
+    p {
+      text-align: center;
+      width: auto;
+      margin: 0 0 7.5%;
+    }
+  }
 `;
 
 function Home() {
