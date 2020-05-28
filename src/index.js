@@ -4,7 +4,7 @@ import App from "./App";
 import { createGlobalStyle } from "styled-components";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import moviesReducer from "./reducers/movies";
+import allReducers from "./reducers";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const store = createStore(
-  moviesReducer,
+  allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

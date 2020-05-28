@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { openModal } from "../actions/openModal";
 
 const Movie = styled.div`
   display: grid;
@@ -15,6 +17,7 @@ const Movie = styled.div`
 
   &:hover {
     background-color: #e5e5e5;
+    cursor: pointer;
   }
 
   img {
@@ -46,8 +49,10 @@ const Movie = styled.div`
 `;
 
 function MovieCard(props) {
+  const dispatch = useDispatch();
+
   return (
-    <Movie>
+    <Movie onClick={() => dispatch(openModal())}>
       <img src={props.imgUrl} alt="Movie poster" />
       <div>
         <h2>{props.title}</h2>
