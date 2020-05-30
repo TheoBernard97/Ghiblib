@@ -1,16 +1,13 @@
 let initialState = {
   visible: false,
-  imgUrl: "",
-  title: "",
-  director: "",
-  release: "",
-  description: "",
+  renderMovie: 0,
 };
 
 const modalReducer = (state = initialState, action) => {
   switch (action.type) {
     case "OPEN_MODAL":
       state.visible = true;
+      state.renderMovie = action.payload;
       return state;
 
     case "CLOSE_MODAL":

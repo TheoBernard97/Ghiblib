@@ -29,9 +29,10 @@ function Movies() {
       <Header />
       <h1>Movies</h1>
       <MoviesWrapper>
-        {moviesReducer.map((movie) => (
+        {moviesReducer.map((movie, index) => (
           <MovieCard
             key={movie.id}
+            index={index}
             imgUrl={movie.imgUrl}
             title={movie.title}
             director={movie.director}

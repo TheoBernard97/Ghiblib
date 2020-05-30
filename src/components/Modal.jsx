@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../actions/closeModal";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const ModalWrapper = styled.div`
@@ -26,31 +24,6 @@ const ModalWrapper = styled.div`
     border: solid black 1px;
   }
 
-  .btn {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 45%;
-    background-color: white;
-    border-radius: 50%;
-    height: 48px;
-    width: 48px;
-    &:hover {
-      background-color: #e5e5e5;
-    }
-    * {
-      margin: auto;
-    }
-  }
-
-  .prev-btn {
-    left: -10%;
-  }
-
-  .next-btn {
-    right: -10%;
-  }
-
   img {
     border: solid black 1px;
     min-height: 425px;
@@ -70,49 +43,28 @@ const ModalWrapper = styled.div`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 
 function Modal() {
   const moviesReducer = useSelector((state) => state.moviesReducer);
+  const modalReducer = useSelector((state) => state.modalReducer);
   const dispatch = useDispatch();
-  const [movieNumber, setMovieNumber] = useState(0);
-
-  function nextMovie() {
-    setMovieNumber((prevValue) => {
-      if (prevValue < 19) {
-        return prevValue + 1;
-      }
-      return prevValue;
-    });
-  }
-
-  function prevMovie() {
-    setMovieNumber((prevValue) => {
-      if (prevValue > 0) {
-        return prevValue - 1;
-      }
-      return prevValue;
-    });
-  }
 
   return (
     <ModalWrapper>
       <ClickAwayListener onClickAway={() => dispatch(closeModal())}>
         <div className="modal">
-          <div className="btn prev-btn" onClick={prevMovie}>
-            <ArrowBackIcon />
-          </div>
-          <img src={moviesReducer[movieNumber].imgUrl} alt="Movie poster" />
+          <img
+            src={moviesReducer[modalReducer.renderMovie].imgUrl}
+            alt="Movie poster"
+          />
           <div className="modal-info">
-            <h1>{moviesReducer[movieNumber].title}</h1>
-            <h2>{moviesReducer[movieNumber].director}</h2>
-            <h3>{moviesReducer[movieNumber].release_date}</h3>
-            <p>{moviesReducer[movieNumber].description}</p>
-          </div>
-          <div className="btn next-btn" onClick={nextMovie}>
-            <ArrowForwardIcon />
+            <h1>{moviesReducer[modalReducer.renderMovie].title}</h1>
+            <h2>{moviesReducer[modalReducer.renderMovie].director}</h2>
+            <h3>{moviesReducer[modalReducer.renderMovie].release_date}</h3>
+            <p>{moviesReducer[modalReducer.renderMovie].description}</p>
           </div>
         </div>
       </ClickAwayListener>

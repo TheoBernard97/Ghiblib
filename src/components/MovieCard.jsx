@@ -52,7 +52,7 @@ function MovieCard(props) {
   const dispatch = useDispatch();
 
   return (
-    <Movie onClick={() => dispatch(openModal())}>
+    <Movie onClick={() => dispatch(openModal(props.index))}>
       <img src={props.imgUrl} alt="Movie poster" />
       <div>
         <h2>{props.title}</h2>
