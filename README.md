@@ -13,6 +13,8 @@ This project was bootstrapped with Create React App.
 - react-router-dom
 - styled-components
 - gh-pages
+- @material-ui/core
+- @material-ui/icons
 
 ### Commands
 
