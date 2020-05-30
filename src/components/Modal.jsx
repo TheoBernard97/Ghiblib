@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../actions/closeModal";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const ModalWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
@@ -98,22 +99,23 @@ function Modal() {
 
   return (
     <ModalWrapper>
-      <div className="modal">
-        <div className="btn prev-btn" onClick={prevMovie}>
-          <ArrowBackIcon />
+      <ClickAwayListener onClickAway={() => dispatch(closeModal())}>
+        <div className="modal">
+          <div className="btn prev-btn" onClick={prevMovie}>
+            <ArrowBackIcon />
+          </div>
+          <img src={moviesReducer[movieNumber].imgUrl} alt="Movie poster" />
+          <div className="modal-info">
+            <h1>{moviesReducer[movieNumber].title}</h1>
+            <h2>{moviesReducer[movieNumber].director}</h2>
+            <h3>{moviesReducer[movieNumber].release_date}</h3>
+            <p>{moviesReducer[movieNumber].description}</p>
+          </div>
+          <div className="btn next-btn" onClick={nextMovie}>
+            <ArrowForwardIcon />
+          </div>
         </div>
-        <img src={moviesReducer[movieNumber].imgUrl} alt="Movie poster" />
-        <div className="modal-info">
-          <h1>{moviesReducer[movieNumber].title}</h1>
-          <h2>{moviesReducer[movieNumber].director}</h2>
-          <h3>{moviesReducer[movieNumber].release_date}</h3>
-          <p>{moviesReducer[movieNumber].description}</p>
-          <button onClick={() => dispatch(closeModal())}>Close</button>
-        </div>
-        <div className="btn next-btn" onClick={nextMovie}>
-          <ArrowForwardIcon />
-        </div>
-      </div>
+      </ClickAwayListener>
     </ModalWrapper>
   );
 }
