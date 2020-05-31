@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Ghiblib/static/js/main.6e633d1a.chunk.js",
-    "main.js.map": "/Ghiblib/static/js/main.6e633d1a.chunk.js.map",
+    "main.js": "/Ghiblib/static/js/main.fef1b2d8.chunk.js",
+    "main.js.map": "/Ghiblib/static/js/main.fef1b2d8.chunk.js.map",
     "runtime-main.js": "/Ghiblib/static/js/runtime-main.966afa9c.js",
     "runtime-main.js.map": "/Ghiblib/static/js/runtime-main.966afa9c.js.map",
     "static/js/2.fe8013d1.chunk.js": "/Ghiblib/static/js/2.fe8013d1.chunk.js",
     "static/js/2.fe8013d1.chunk.js.map": "/Ghiblib/static/js/2.fe8013d1.chunk.js.map",
     "index.html": "/Ghiblib/index.html",
-    "precache-manifest.c23bd9ad6b017e48345277b2b6107c62.js": "/Ghiblib/precache-manifest.c23bd9ad6b017e48345277b2b6107c62.js",
+    "precache-manifest.2815d75c7811fe96318dfc42f8e49936.js": "/Ghiblib/precache-manifest.2815d75c7811fe96318dfc42f8e49936.js",
     "service-worker.js": "/Ghiblib/service-worker.js",
     "static/js/2.fe8013d1.chunk.js.LICENSE.txt": "/Ghiblib/static/js/2.fe8013d1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.966afa9c.js",
     "static/js/2.fe8013d1.chunk.js",
-    "static/js/main.6e633d1a.chunk.js"
+    "static/js/main.fef1b2d8.chunk.js"
   ]
 }
