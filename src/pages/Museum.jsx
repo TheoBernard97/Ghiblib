@@ -9,11 +9,26 @@ const MuseumWrapper = styled.div`
     margin: 2% 9%;
   }
 
-  iframe {
-    background-color: grey;
-    width: 711px;
-    height: 400px;
+  .video-div-wrapper{
+    margin: auto;
+    width: 70%;
+    
+    .video-div {
+    padding-top: 56.25%;
+    position: relative;
+
+      iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
   }
+  
 
   .btn-div {
     margin: 2.5%;
@@ -38,8 +53,9 @@ const MuseumWrapper = styled.div`
       width: 100%;
     }
 
-    iframe {
-      display: none;
+    .video-div-wrapper{
+      margin-top: 5%;
+      width: 100%;
     }
 
     .btn-div {
@@ -62,12 +78,17 @@ function Museum() {
         rooftop garden, and a theater for exclusive short films by Studio
         Ghibli.
       </p>
-      <iframe
-        src="https://www.youtube.com/embed/KE6bUMwpsyQ"
-        title="Studio Ghibli"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
+      <div className="video-div-wrapper">
+        <div className="video-div">
+          <iframe
+            src="https://www.youtube.com/embed/KE6bUMwpsyQ"
+            title="Studio Ghibli"
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+
       <div className="btn-div">
         <a className="btn" href="http://www.ghibli-museum.jp/en/">
           Ghibli Museum

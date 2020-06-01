@@ -32,7 +32,6 @@ const Wrapper = styled.div`
     }
 
     p {
-      text-align: center;
       width: auto;
       margin: 0 0 7.5%;
     }
