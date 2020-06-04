@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../actions/closeModal";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import CloseIcon from "@material-ui/icons/Close";
 
 const ModalWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
@@ -27,6 +28,29 @@ const ModalWrapper = styled.div`
     max-height: 475px;
     background-color: white;
     border: solid black 1px;
+  }
+
+  .modal-close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border: black solid 1px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    * {
+      width: 18px;
+      height: 18px;
+    }
+    &:hover {
+      background-color: #e5e5e5;
+      cursor: pointer;
+    }
   }
 
   .modal-poster {
@@ -79,6 +103,7 @@ const ModalWrapper = styled.div`
       margin: 2% 0 0;
     }
   }
+
   @media all and (max-width: 765px) {
     .modal {
       grid-template-columns: 100px 1fr;
@@ -134,6 +159,12 @@ function Modal() {
           <p className="modal-description">
             {moviesReducer[modalReducer.renderMovie].description}
           </p>
+          <div
+            className="modal-close-btn"
+            onClick={() => dispatch(closeModal())}
+          >
+            <CloseIcon />
+          </div>
         </div>
       </ClickAwayListener>
     </ModalWrapper>
