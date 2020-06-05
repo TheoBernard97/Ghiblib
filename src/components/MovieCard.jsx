@@ -16,6 +16,7 @@ const Movie = styled.div`
   text-align: left;
 
   &:hover {
+    transform: scale(1.03);
     background-color: #e5e5e5;
     cursor: pointer;
   }

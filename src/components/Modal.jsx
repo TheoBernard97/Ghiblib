@@ -10,6 +10,7 @@ const ModalWrapper = styled.div`
   display: flex;
   justify-content: center;
   position: fixed;
+  z-index: 1;
   left: 0;
   width: 100%;
   height: 100%;
