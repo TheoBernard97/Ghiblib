@@ -79,4 +79,8 @@ export const images = [
     id: "4e236f34-b981-41c3-8c65-f8c9000b94e7",
     url: "./assets/yesterday.jpg",
   },
+  {
+    id: "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500",
+    url: "./assets/red_turtle.jpg",
+  },
 ];
