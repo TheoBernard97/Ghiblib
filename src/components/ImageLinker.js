@@ -83,4 +83,8 @@ export const images = [
     id: "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500",
     url: "./assets/red_turtle.jpg",
   },
+  {
+    id: "790e0028-a31c-4626-a694-86b7a8cada40",
+    url: "./assets/earwig_and_the_witch.jpg",
+  },
 ];
